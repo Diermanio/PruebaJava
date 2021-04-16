@@ -1,18 +1,18 @@
 package righttek.utils;
-import righttek.model.employee;
+import righttek.model.Employee;
 import java.util.Scanner;
 
 /**
  * @author Diego Yance
  */
-public class registerEmployee {
+public class RegisterEmployee {
 
     /** Returns an Employee object filled with data provided by the user, this data consists in the name,
      * salary, if the employee has child, couple or adults at his care.
      *
      * @return an object 'employee'
      */
-    public static employee register(){
+    public static Employee register(){
         Scanner sc = new Scanner(System.in);
         int counter = 0;
         boolean repeat = true, hasChild = false, hasCouple = false, hasAdult = false;
@@ -35,13 +35,13 @@ public class registerEmployee {
 
                 case 0:
                     System.out.println("¿Tiene hijos? : (Ingrese 'y' o 'n' para si o no)");
-                    String Child = sc.nextLine();
-                    if(Child.equalsIgnoreCase("y")){
+                    String child = sc.nextLine();
+                    if(child.equalsIgnoreCase("y")){
                         hasChild = true;
                         counter++;
                         break;
                     }
-                    else if(Child.equalsIgnoreCase("n")){
+                    else if(child.equalsIgnoreCase("n")){
                         counter++;
                         break;
                     }
@@ -50,13 +50,13 @@ public class registerEmployee {
 
                 case 1:
                     System.out.println("¿Tiene esposo/a? : (Ingrese 'y' o 'n' para si o no)");
-                    String Couple = sc.nextLine();
-                    if(Couple.equalsIgnoreCase("y")){
+                    String couple = sc.nextLine();
+                    if(couple.equalsIgnoreCase("y")){
                         hasCouple = true;
                         counter++;
                         break;
                     }
-                    else if(Couple.equalsIgnoreCase("n")){
+                    else if(couple.equalsIgnoreCase("n")){
                         counter++;
                         break;
                     }
@@ -65,13 +65,13 @@ public class registerEmployee {
 
                 case 2:
                     System.out.println("¿Tiene un adulto mayor a cargo? : (Ingrese 'y' o 'n' para si o no)");
-                    String Adult = sc.nextLine();
-                    if(Adult.equalsIgnoreCase("y")){
+                    String adult = sc.nextLine();
+                    if(adult.equalsIgnoreCase("y")){
                         hasAdult = true;
                         repeat=false;
                         break;
                     }
-                    else if(Adult.equalsIgnoreCase("n")){
+                    else if(adult.equalsIgnoreCase("n")){
                         repeat=false;
                         break;
                     }
@@ -79,6 +79,6 @@ public class registerEmployee {
                     break;
             }
         }
-        return new employee(salary, name, hasChild, hasCouple, hasAdult);
+        return new Employee(salary, name, hasChild, hasCouple, hasAdult);
     }
 }

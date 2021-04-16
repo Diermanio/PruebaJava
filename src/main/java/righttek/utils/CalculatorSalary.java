@@ -1,11 +1,11 @@
 package righttek.utils;
-import righttek.model.employee;
+import righttek.model.Employee;
 import java.util.Scanner;
 
 /**
  * @author Diego Yance
  */
-public class calculatorSalary {
+public class CalculatorSalary {
 
     /** This method consists in calculate the estimated salary of an employee based on different parameters, if the
      * salary is more than 400, the employee gains a bonus based on a percentage of his accomplishment, also his
@@ -14,7 +14,7 @@ public class calculatorSalary {
      * @param emp Specifies the employee which is going to be calculated his salary
      * @return a float value that contains the salary of the employee passed
      */
-    public float calculate(employee emp){
+    public float calculate(Employee emp){
 
         if(emp.getSalary()<0){return -1;}
         Scanner sc = new Scanner(System.in);
@@ -29,6 +29,8 @@ public class calculatorSalary {
             System.out.println("Ingrese el porcentaje de cumplimiento alcanzado: (0-100)");
             float percentage = Float.parseFloat(sc.nextLine());
 
+            //test purposes
+            //float percentage = 100;
 
             /*En el ejercicio se detalla que se suma un porcentaje adicional al salario pero este esta expresado
             con el simbolo de porcentaje '%' por lo que se interpreta que las cargas seran de un 0.08%, 0.09%, 0.1%

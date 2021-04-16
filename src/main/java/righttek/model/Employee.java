@@ -3,7 +3,7 @@ package righttek.model;
 /**
  * @author Diego Yance
  */
-public class employee {
+public class Employee {
     private Float salary;
     private String name;
     private boolean hasChild, hasCouple, hasAdult;
@@ -16,7 +16,7 @@ public class employee {
      * @param hasCouple if an employee is or not married
      * @param hasAdult if an employee has or not old persons at his care
      */
-    public employee(float salary, String name, boolean hasChild, boolean hasCouple, boolean hasAdult) {
+    public Employee(float salary, String name, boolean hasChild, boolean hasCouple, boolean hasAdult) {
         this.salary = salary;
         this.name = name;
         this.hasChild = hasChild;
