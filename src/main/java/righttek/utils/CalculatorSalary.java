@@ -1,6 +1,5 @@
 package righttek.utils;
 import righttek.model.Employee;
-import java.util.Scanner;
 
 /**
  * @author Diego Yance
@@ -17,7 +16,6 @@ public class CalculatorSalary {
     public float calculate(Employee emp, float percentage){
 
         if(emp.getSalary()<0){return -1;}
-        Scanner sc = new Scanner(System.in);
         float charge = 0;
         System.out.println("Registrado exitosamente!");
 

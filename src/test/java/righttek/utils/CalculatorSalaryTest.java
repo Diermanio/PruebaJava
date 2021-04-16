@@ -2,7 +2,6 @@ package righttek.utils;
 
 import static org.junit.jupiter.api.Assertions.*;
 import righttek.model.Employee;
-import righttek.utils.CalculatorSalary;
 
 class CalculatorSalaryTest {
 
